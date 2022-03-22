@@ -25,6 +25,9 @@ it('Divide by 0', () => {
 it('100 divide by -4', () => {
   expect(new TurboName(100).divide(-4).result()).toBe(-25);
 });
+it("method chaining ", () => {
+  expect(new TurboName(10).subtract(5).divide(-3).result()).toBeCloseTo(-1.667);
+});
 
 });
 
