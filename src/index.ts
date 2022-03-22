@@ -1,21 +1,23 @@
+import Big from 'big.js';
+
 export const number = 5;
 export class TurboName {
-  num: number;
+  num: Big;
   constructor(num: number) {
-    this.num = num;
+    this.num = Big(num);
   }
   result() {
     return this.num;
   }
   subtract(x: number) {
-    this.num = this.num - x;
+    this.num = this.num.minus(Big(x));
     return this;
   }
   divide(x:number){
       if(x ===0){
           throw new Error("Can't divide by 0!")
       }
-      this.num = this.num / x
-      return this
+      this.num = this.num.div(Big(x))
+      return this;
   }
 }
