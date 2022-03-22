@@ -1,7 +1,9 @@
-import { number } from "./index";
+import { TurboName } from "./index"
 
-describe("number", function () {
-  it("works", () => {
-    expect(number).toBe(5);
+describe("class TurboName", function () {
+  it('return result', () => {
+    expect(new TurboName(10).result()).toBe(10);
   });
+
+
 });
